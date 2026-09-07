@@ -36,9 +36,21 @@
   <div id="raw-scores-input">
     <h2>Test Scores</h2>
     <div id="raw-score-fields">
-      <!-- Last row of the score grid, so the composite lines up under the weighted scores. -->
+      <!-- Last rows of the score grid, so the totals line up under the weighted scores. -->
+      <div id="total-weighted-score-output">
+        <span id="total-weighted-score-label">Total Weighted Score</span>
+        <span id="total-weighted-score-value"></span>
+      </div>
+
+      <!-- Step rows are rendered into here by showCalculationSteps. -->
+      <details id="calculation-steps">
+        <summary>Calculation steps</summary>
+        <!-- Rows rendered by showCalculationSteps into their own grid. -->
+        <div id="calculation-step-rows"></div>
+      </details>
+
       <div id="composite-score-output">
-        <span id="composite-score-label">Total Weighted Score</span>
+        <span id="composite-score-label">Composite Score</span>
         <span id="composite-score-value"></span>
       </div>
     </div>

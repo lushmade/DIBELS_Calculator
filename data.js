@@ -116,1790 +116,610 @@ const TEST_NAMES = {
   "MAZE": "Maze"
 }
 
-const RANGE_LABELS = {
-  "K": {
-    "BOY": {
-      "Composite": [
-        {
-          "minScore": 243,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 280,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 306,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 332,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "LNF": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 16,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 25,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        }
-      ],
-      "PSF": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 1,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 5,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 15,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "NWF-CLS": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 4,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 9,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 20,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "NWF-WRC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 1,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        }
-      ],
-      "WRF": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 1,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        }
-      ]
-    },
-    "MOY": {
-      "Composite": [
-        {
-          "minScore": 318,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 356,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 371,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 393,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "LNF": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 31,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 37,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        }
-      ],
-      "PSF": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 23,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 29,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 43,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "NWF-CLS": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 16,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 25,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 36,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "NWF-WRC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 1,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 3,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 9,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "WRF": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 1,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 4,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 10,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ]
-    },
-    "EOY": {
-      "Composite": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 406,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 420,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 450,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "LNF": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 35,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 42,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        }
-      ],
-      "PSF": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 37,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 44,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 53,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "NWF-CLS": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 24,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 31,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 49,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "NWF-WRC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 4,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 7,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 13,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "WRF": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 6,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 10,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 18,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ]
-    }
+// Benchmark bands, lowest to highest. The key order defines their severity.
+const BENCHMARK_LABELS = {
+  "BELOW": {
+    "label": "Well Below Benchmark",
+    "color": "Red"
   },
+  "AT_OR_BELOW": {
+    "label": "Below Benchmark",
+    "color": "Yellow"
+  },
+  "AT": {
+    "label": "At or Above Benchmark",
+    "color": "Green"
+  },
+  "ABOVE": {
+    "label": "Above Benchmark",
+    "color": "Blue"
+  }
+}
+
+// Minimum score for each benchmark band, by grade, grade phase and test.
+const RANGE_LABELS = {
   "1": {
     "BOY": {
-      "Composite": [
-        {
-          "minScore": 300,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 321,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 330,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 354,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "LNF": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 32,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 42,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        }
-      ],
-      "PSF": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 19,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 31,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 47,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "NWF-CLS": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 25,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 30,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 47,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "NWF-WRC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 1,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 5,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 16,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "WRF": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 8,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 12,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 20,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "ORF-WRC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 5,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 10,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 35,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "ORC-ACC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 0.41,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 0.67,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        }
-      ]
+      "Composite": {
+        "BELOW": 300,
+        "AT_OR_BELOW": 321,
+        "AT": 330,
+        "ABOVE": 354
+      },
+      "LNF": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 32,
+        "AT": 42
+      },
+      "PSF": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 19,
+        "AT": 31,
+        "ABOVE": 47
+      },
+      "NWF-CLS": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 25,
+        "AT": 30,
+        "ABOVE": 47
+      },
+      "NWF-WRC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 1,
+        "AT": 5,
+        "ABOVE": 16
+      },
+      "WRF": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 8,
+        "AT": 12,
+        "ABOVE": 20
+      },
+      "ORF-WRC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 5,
+        "AT": 10,
+        "ABOVE": 35
+      },
+      "ORC-ACC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 0.41,
+        "AT": 0.67
+      }
     },
     "MOY": {
-      "Composite": [
-        {
-          "minScore": 340,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 377,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 389,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 424,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "LNF": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 51,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 57,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        }
-      ],
-      "PSF": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 34,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 43,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 57,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "NWF-CLS": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 41,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 52,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 78,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "NWF-WRC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 10,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 14,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 26,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "WRF": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 14,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 17,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 33,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "ORF-WRC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 10,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 21,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 57,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "ORC-ACC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 0.54,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 0.87,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        }
-      ]
+      "Composite": {
+        "BELOW": 340,
+        "AT_OR_BELOW": 377,
+        "AT": 389,
+        "ABOVE": 424
+      },
+      "LNF": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 51,
+        "AT": 57
+      },
+      "PSF": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 34,
+        "AT": 43,
+        "ABOVE": 57
+      },
+      "NWF-CLS": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 41,
+        "AT": 52,
+        "ABOVE": 78
+      },
+      "NWF-WRC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 10,
+        "AT": 14,
+        "ABOVE": 26
+      },
+      "WRF": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 14,
+        "AT": 17,
+        "ABOVE": 33
+      },
+      "ORF-WRC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 10,
+        "AT": 21,
+        "ABOVE": 57
+      },
+      "ORC-ACC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 0.54,
+        "AT": 0.87
+      }
     },
     "EOY": {
-      "Composite": [
-        {
-          "minScore": 380,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 427,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 441,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 480,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "LNF": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 53,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 59,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        }
-      ],
-      "PSF": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 37,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 45,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 61,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "NWF-CLS": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 45,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 55,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 87,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "NWF-WRC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 11,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 15,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 28,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "WRF": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 17,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 25,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 50,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "ORF-WRC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 26,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 39,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 76,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "ORC-ACC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 0.85,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 0.91,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        }
-      ]
+      "Composite": {
+        "BELOW": 380,
+        "AT_OR_BELOW": 427,
+        "AT": 441,
+        "ABOVE": 480
+      },
+      "LNF": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 53,
+        "AT": 59
+      },
+      "PSF": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 37,
+        "AT": 45,
+        "ABOVE": 61
+      },
+      "NWF-CLS": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 45,
+        "AT": 55,
+        "ABOVE": 87
+      },
+      "NWF-WRC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 11,
+        "AT": 15,
+        "ABOVE": 28
+      },
+      "WRF": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 17,
+        "AT": 25,
+        "ABOVE": 50
+      },
+      "ORF-WRC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 26,
+        "AT": 39,
+        "ABOVE": 76
+      },
+      "ORC-ACC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 0.85,
+        "AT": 0.91
+      }
     }
   },
   "2": {
     "BOY": {
-      "Composite": [
-        {
-          "minScore": 286,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 316,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 329,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 361,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "NWF-CLS": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 41,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 50,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 86,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "NWF-WRC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 10,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 15,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 25,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "WRF": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 18,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 26,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 50,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "ORF-WRC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 29,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 49,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 85,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "ORC-ACC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 0.84,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 0.92,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        }
-      ],
-      "MAZE": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 2.5,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 5,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 11,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ]
+      "Composite": {
+        "BELOW": 286,
+        "AT_OR_BELOW": 316,
+        "AT": 329,
+        "ABOVE": 361
+      },
+      "NWF-CLS": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 41,
+        "AT": 50,
+        "ABOVE": 86
+      },
+      "NWF-WRC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 10,
+        "AT": 15,
+        "ABOVE": 25
+      },
+      "WRF": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 18,
+        "AT": 26,
+        "ABOVE": 50
+      },
+      "ORF-WRC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 29,
+        "AT": 49,
+        "ABOVE": 85
+      },
+      "ORC-ACC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 0.84,
+        "AT": 0.92
+      },
+      "MAZE": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 2.5,
+        "AT": 5,
+        "ABOVE": 11
+      }
     },
     "MOY": {
-      "Composite": [
-        {
-          "minScore": 326,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 373,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 389,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 423,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "NWF-CLS": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 54,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 68,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 103,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "NWF-WRC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 15,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 20,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 36,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "WRF": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 23,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 36,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 63,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "ORF-WRC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 59,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 78,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 117,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "ORC-ACC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 0.91,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 0.96,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        }
-      ],
-      "MAZE": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 6.5,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 9,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 14.5,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ]
+      "Composite": {
+        "BELOW": 326,
+        "AT_OR_BELOW": 373,
+        "AT": 389,
+        "ABOVE": 423
+      },
+      "NWF-CLS": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 54,
+        "AT": 68,
+        "ABOVE": 103
+      },
+      "NWF-WRC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 15,
+        "AT": 20,
+        "ABOVE": 36
+      },
+      "WRF": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 23,
+        "AT": 36,
+        "ABOVE": 63
+      },
+      "ORF-WRC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 59,
+        "AT": 78,
+        "ABOVE": 117
+      },
+      "ORC-ACC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 0.91,
+        "AT": 0.96
+      },
+      "MAZE": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 6.5,
+        "AT": 9,
+        "ABOVE": 14.5
+      }
     },
     "EOY": {
-      "Composite": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 421,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 439,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 474,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "NWF-CLS": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 54,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 76,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 117,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "NWF-WRC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 17,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 22,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 39,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "WRF": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 27,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 43,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 70,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "ORF-WRC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 77,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 94,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 128,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "ORC-ACC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 0.91,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 0.96,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        }
-      ],
-      "MAZE": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 7,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 9.5,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 18,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ]
+      "Composite": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 421,
+        "AT": 439,
+        "ABOVE": 474
+      },
+      "NWF-CLS": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 54,
+        "AT": 76,
+        "ABOVE": 117
+      },
+      "NWF-WRC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 17,
+        "AT": 22,
+        "ABOVE": 39
+      },
+      "WRF": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 27,
+        "AT": 43,
+        "ABOVE": 70
+      },
+      "ORF-WRC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 77,
+        "AT": 94,
+        "ABOVE": 128
+      },
+      "ORC-ACC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 0.91,
+        "AT": 0.96
+      },
+      "MAZE": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 7,
+        "AT": 9.5,
+        "ABOVE": 18
+      }
     }
   },
   "3": {
     "BOY": {
-      "Composite": [
-        {
-          "minScore": 268,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 314,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 332,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 365,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "NWF-CLS": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 52,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 76,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 121,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "NWF-WRC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 18,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 24,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 34,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "WRF": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 30,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 40,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 60,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "ORF-WRC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 55,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 73,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 105,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "ORC-ACC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 0.91,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 0.96,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        }
-      ],
-      "MAZE": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 5,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 8,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 15,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ]
+      "Composite": {
+        "BELOW": 268,
+        "AT_OR_BELOW": 314,
+        "AT": 332,
+        "ABOVE": 365
+      },
+      "NWF-CLS": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 52,
+        "AT": 76,
+        "ABOVE": 121
+      },
+      "NWF-WRC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 18,
+        "AT": 24,
+        "ABOVE": 34
+      },
+      "WRF": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 30,
+        "AT": 40,
+        "ABOVE": 60
+      },
+      "ORF-WRC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 55,
+        "AT": 73,
+        "ABOVE": 105
+      },
+      "ORC-ACC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 0.91,
+        "AT": 0.96
+      },
+      "MAZE": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 5,
+        "AT": 8,
+        "ABOVE": 15
+      }
     },
     "MOY": {
-      "Composite": [
-        {
-          "minScore": 308,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 377,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 393,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 427,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "NWF-CLS": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 78,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 94,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 138,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "NWF-WRC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 23,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 30,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 46,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "WRF": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 40,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 50,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 65,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "ORF-WRC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 85,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 105,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 141,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "ORC-ACC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 0.91,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 0.96,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        }
-      ],
-      "MAZE": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 9.5,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 12,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 20.5,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ]
+      "Composite": {
+        "BELOW": 308,
+        "AT_OR_BELOW": 377,
+        "AT": 393,
+        "ABOVE": 427
+      },
+      "NWF-CLS": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 78,
+        "AT": 94,
+        "ABOVE": 138
+      },
+      "NWF-WRC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 23,
+        "AT": 30,
+        "ABOVE": 46
+      },
+      "WRF": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 40,
+        "AT": 50,
+        "ABOVE": 65
+      },
+      "ORF-WRC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 85,
+        "AT": 105,
+        "ABOVE": 141
+      },
+      "ORC-ACC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 0.91,
+        "AT": 0.96
+      },
+      "MAZE": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 9.5,
+        "AT": 12,
+        "ABOVE": 20.5
+      }
     },
     "EOY": {
-      "Composite": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 424,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 442,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 467,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "NWF-CLS": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 80,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 105,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 141,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "NWF-WRC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 24,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 31,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 45,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "WRF": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 47,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 55,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 70,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "ORF-WRC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 96,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 114,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 136,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ],
-      "ORC-ACC": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 0.91,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 0.96,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        }
-      ],
-      "MAZE": [
-        {
-          "minScore": 0,
-          "label": "Well Below Benchmark",
-          "color": "Red"
-        },
-        {
-          "minScore": 12,
-          "label": "Below Benchmark",
-          "color": "Yellow"
-        },
-        {
-          "minScore": 15.5,
-          "label": "At or Above Benchmark",
-          "color": "Green"
-        },
-        {
-          "minScore": 22.5,
-          "label": "Above Benchmark",
-          "color": "Blue"
-        }
-      ]
+      "Composite": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 424,
+        "AT": 442,
+        "ABOVE": 467
+      },
+      "NWF-CLS": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 80,
+        "AT": 105,
+        "ABOVE": 141
+      },
+      "NWF-WRC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 24,
+        "AT": 31,
+        "ABOVE": 45
+      },
+      "WRF": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 47,
+        "AT": 55,
+        "ABOVE": 70
+      },
+      "ORF-WRC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 96,
+        "AT": 114,
+        "ABOVE": 136
+      },
+      "ORC-ACC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 0.91,
+        "AT": 0.96
+      },
+      "MAZE": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 12,
+        "AT": 15.5,
+        "ABOVE": 22.5
+      }
     }
+  },
+  "K": {
+    "BOY": {
+      "Composite": {
+        "BELOW": 243,
+        "AT_OR_BELOW": 280,
+        "AT": 306,
+        "ABOVE": 332
+      },
+      "LNF": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 16,
+        "AT": 25
+      },
+      "PSF": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 1,
+        "AT": 5,
+        "ABOVE": 15
+      },
+      "NWF-CLS": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 4,
+        "AT": 9,
+        "ABOVE": 20
+      },
+      "NWF-WRC": {
+        "BELOW": 0,
+        "AT": 1
+      },
+      "WRF": {
+        "BELOW": 0,
+        "AT": 1
+      }
+    },
+    "MOY": {
+      "Composite": {
+        "BELOW": 318,
+        "AT_OR_BELOW": 356,
+        "AT": 371,
+        "ABOVE": 393
+      },
+      "LNF": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 31,
+        "AT": 37
+      },
+      "PSF": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 23,
+        "AT": 29,
+        "ABOVE": 43
+      },
+      "NWF-CLS": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 16,
+        "AT": 25,
+        "ABOVE": 36
+      },
+      "NWF-WRC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 1,
+        "AT": 3,
+        "ABOVE": 9
+      },
+      "WRF": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 1,
+        "AT": 4,
+        "ABOVE": 10
+      }
+    },
+    "EOY": {
+      "Composite": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 406,
+        "AT": 420,
+        "ABOVE": 450
+      },
+      "LNF": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 35,
+        "AT": 42
+      },
+      "PSF": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 37,
+        "AT": 44,
+        "ABOVE": 53
+      },
+      "NWF-CLS": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 24,
+        "AT": 31,
+        "ABOVE": 49
+      },
+      "NWF-WRC": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 4,
+        "AT": 7,
+        "ABOVE": 13
+      },
+      "WRF": {
+        "BELOW": 0,
+        "AT_OR_BELOW": 6,
+        "AT": 10,
+        "ABOVE": 18
+      }
+    }
+  }
+}
+
+// Standardization constants per grade, from the Adjustments table.
+const ADJUSTMENT = {
+  "K": {
+    "Mean": 729,
+    "SD": 630,
+    "BOY": 289,
+    "MOY": 364,
+    "EOY": 398
+  },
+  "1": {
+    "Mean": 3371,
+    "SD": 2251,
+    "BOY": 360,
+    "MOY": 400,
+    "EOY": 440
+  },
+  "2": {
+    "Mean": 7085,
+    "SD": 3811,
+    "BOY": 360,
+    "MOY": 400,
+    "EOY": 440
+  },
+  "3": {
+    "Mean": 10051,
+    "SD": 4349,
+    "BOY": 360,
+    "MOY": 400,
+    "EOY": 440
+  },
+  "4": {
+    "Mean": 4563,
+    "SD": 1771,
+    "BOY": 360,
+    "MOY": 400,
+    "EOY": 440
+  },
+  "5": {
+    "Mean": 4085,
+    "SD": 1299,
+    "BOY": 360,
+    "MOY": 400,
+    "EOY": 440
+  },
+  "6": {
+    "Mean": 6087,
+    "SD": 1685,
+    "BOY": 360,
+    "MOY": 400,
+    "EOY": 440
+  },
+  "7": {
+    "Mean": 6444,
+    "SD": 1960,
+    "BOY": 360,
+    "MOY": 400,
+    "EOY": 440
+  },
+  "8": {
+    "Mean": 4824,
+    "SD": 1506,
+    "BOY": 360,
+    "MOY": 400,
+    "EOY": 440
   }
 }

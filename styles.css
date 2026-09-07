@@ -38,12 +38,14 @@
 
 .test-weight,
 .weighted-score,
+#total-weighted-score-value,
 #composite-score-value {
   text-align: right;
 }
 
 /* Benchmark highlighting: the color name comes straight from RANGE_LABELS. */
 .weighted-score,
+#total-weighted-score-value,
 #composite-score-value {
   padding: 0.1rem 0.35rem;
   border-radius: 3px;
@@ -55,18 +57,21 @@
   width: var(--score-width);
 }
 
-/* The composite joins the score grid as its last row. Both number cells sit
-   flush to the right of the last column, so the sum lines up under the
-   weighted scores it adds together. */
+/* The two totals join the score grid as its last rows. Their number cells sit
+   flush to the right of the last column, so they line up under the weighted
+   scores they are derived from. */
+#total-weighted-score-output,
 #composite-score-output {
   display: contents;
 }
 
 .weighted-score,
+#total-weighted-score-value,
 #composite-score-value {
   justify-self: end;
 }
 
+#total-weighted-score-label,
 #composite-score-label {
   grid-column: 1 / 6;
   justify-self: end;
@@ -74,14 +79,56 @@
   font-weight: bold;
 }
 
+#total-weighted-score-value,
 #composite-score-value {
   grid-column: 6;
   box-sizing: border-box;
   width: var(--score-width);
+}
+
+/* The rule marks the total as the sum of the column above it. */
+#total-weighted-score-value {
   border-top: 2px solid #555;
 }
 
-/* The label reads at the same size as the total it names. */
+/* The <details> is one row of the score grid. Its contents lay themselves out
+   independently, so the steps no longer share the test score columns and the
+   native open/closed behaviour works without help. */
+#calculation-steps {
+  grid-column: 1 / -1;
+  justify-self: end;
+  margin: 0.2rem 0;
+  font-size: 0.85rem;
+}
+
+#calculation-steps summary {
+  cursor: pointer;
+}
+
+#calculation-step-rows {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  align-items: center;
+  gap: 0.25rem 0.5rem;
+  margin: 0.4rem 0;
+}
+
+.calculation-step {
+  display: contents;
+}
+
+.step-label {
+  padding-right: 0.5rem;
+  color: #555;
+}
+
+.step-operand,
+.step-result {
+  justify-self: end;
+  font-variant-numeric: tabular-nums;
+}
+
+/* The composite is the headline number; its label reads at the same size. */
 #composite-score-label,
 #composite-score-value {
   font-size: 1.15rem;

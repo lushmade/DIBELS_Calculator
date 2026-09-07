@@ -90,38 +90,101 @@ function updateWeightedScores() {
     total += weighted
   }
 
-  showScore(document.getElementById("composite-score-value"), Math.round(total), ranges["Composite"])
+  document.getElementById("total-weighted-score-value").textContent = round(total)
+  showCalculationSteps(total)
+  showScore(document.getElementById("composite-score-value"), compositeScore(total), ranges["Composite"])
+}
+
+// Puts the total weighted score on the composite scale: a z-score scaled by 40,
+// rounded to the ones place, then offset by the grade phase's constant.
+function compositeScore(total) {
+  const { grade, phase } = currentSelection()
+  const { Mean, SD } = ADJUSTMENT[grade]
+
+  return Math.round(40 * (total - Mean) / SD) + ADJUSTMENT[grade][phase]
+}
+
+// Shows the arithmetic behind the composite, one row per step. The rows use the
+// same six columns as the test rows: label, operand, operator, operand, =, result.
+function showCalculationSteps(total) {
+  const { grade, phase } = currentSelection()
+  const { Mean, SD } = ADJUSTMENT[grade]
+  const constant = ADJUSTMENT[grade][phase]
+
+  const a = total - Mean
+  const b = a / SD
+  // B keeps four decimals so that B x 40 visibly reconciles with the rounded C.
+  const c = Math.round(b * 40)
+
+  const steps = [
+    ["Subtract the mean", round(total), "-", Mean, round(a)],
+    ["Divide by standard deviation", round(a), "/", SD, round(b, 4)],
+    ["Multiply by 40 and round", round(b, 4), "x", 40, c],
+    ["Add scaling constant", c, "+", constant, c + constant],
+  ]
+
+  const container = document.getElementById("calculation-step-rows")
+  container.innerHTML = ""
+
+  for (const [label, left, operator, right, result] of steps) {
+    const row = document.createElement("div")
+    row.className = "calculation-step"
+
+    row.append(
+      cell("step-label", label),
+      cell("step-operand", left),
+      cell("step-operator", operator),
+      cell("step-operand", right),
+      cell("step-equals", "="),
+      cell("step-result", result),
+    )
+    container.append(row)
+  }
+}
+
+function cell(className, text) {
+  const span = document.createElement("span")
+  span.className = className
+  span.textContent = text
+  return span
 }
 
 // Shows a score, colored by the benchmark band it falls into.
-function showScore(element, score, bands) {
+function showScore(element, score, cuts) {
   element.textContent = score
-  showBenchmark(element, score, bands)
+  showBenchmark(element, score, cuts)
 }
 
 // Gives an element the background color of the benchmark band its score falls
 // into. Kept separate from showScore because an input carries a value, not text.
-function showBenchmark(element, score, bands) {
-  const band = bandFor(bands, score)
-  if (band) {
-    element.dataset.color = band.color.toLowerCase()
-    element.title = band.label
+function showBenchmark(element, score, cuts) {
+  const benchmark = benchmarkFor(cuts, score)
+  if (benchmark) {
+    const { label, color } = BENCHMARK_LABELS[benchmark]
+    element.dataset.color = color.toLowerCase()
+    element.title = label
   } else {
     delete element.dataset.color
     element.removeAttribute("title")
   }
 }
 
-// The highest band the score reaches. A score under every band is treated as
-// falling in the lowest one, since some Composite bands do not start at zero.
-function bandFor(bands, score) {
-  if (!bands || bands.length === 0) return null
-  return bands.findLast(band => score >= band.minScore) ?? bands[0]
+// The highest benchmark the score reaches, as a BENCHMARK_LABELS key. A score
+// under every cut is treated as the lowest one, since some Composite ranges do
+// not start at zero.
+function benchmarkFor(cuts, score) {
+  if (!cuts) return null
+
+  const benchmarks = Object.keys(BENCHMARK_LABELS).filter(key => key in cuts)
+  if (benchmarks.length === 0) return null
+
+  return benchmarks.findLast(key => score >= cuts[key]) ?? benchmarks[0]
 }
 
 // Weighted scores keep two decimals; the composite is rounded to a whole number.
-function round(number) {
-  return Math.round(number * 100) / 100
+function round(number, places = 2) {
+  const factor = 10 ** places
+  return Math.round(number * factor) / factor
 }
 
 document.getElementById("grade-level-selection").addEventListener("change", updateTestScores)
