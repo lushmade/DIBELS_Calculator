@@ -1,0 +1,93 @@
+/* Each test row lays its six cells directly into the shared grid, so the
+   columns line up across every row regardless of test name length. */
+#raw-score-fields {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  justify-content: start;
+  align-items: center;
+  gap: 0.4rem 0.75rem;
+}
+
+.test-score {
+  display: contents;
+}
+
+/* Raw score, weighted score and composite share one width so the number
+   columns line up. Wide enough for a weighted score like 1300.86. */
+:root {
+  --score-width: 4.5rem;
+}
+
+.raw-score {
+  box-sizing: border-box;
+  width: var(--score-width);
+}
+
+/* Scores are typed, not stepped, so drop the spinner arrows. */
+.raw-score {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.raw-score::-webkit-outer-spin-button,
+.raw-score::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.test-weight,
+.weighted-score,
+#composite-score-value {
+  text-align: right;
+}
+
+/* Benchmark highlighting: the color name comes straight from RANGE_LABELS. */
+.weighted-score,
+#composite-score-value {
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+}
+
+/* Matches the raw score input, so the two number columns are the same width. */
+.weighted-score {
+  box-sizing: border-box;
+  width: var(--score-width);
+}
+
+/* The composite joins the score grid as its last row. Both number cells sit
+   flush to the right of the last column, so the sum lines up under the
+   weighted scores it adds together. */
+#composite-score-output {
+  display: contents;
+}
+
+.weighted-score,
+#composite-score-value {
+  justify-self: end;
+}
+
+#composite-score-label {
+  grid-column: 1 / 6;
+  justify-self: end;
+  align-self: end;
+  font-weight: bold;
+}
+
+#composite-score-value {
+  grid-column: 6;
+  box-sizing: border-box;
+  width: var(--score-width);
+  border-top: 2px solid #555;
+}
+
+/* The label reads at the same size as the total it names. */
+#composite-score-label,
+#composite-score-value {
+  font-size: 1.15rem;
+}
+
+[data-color="red"]    { background-color: #f4b8b8; }
+[data-color="yellow"] { background-color: #f8e3a3; }
+[data-color="green"]  { background-color: #b0dcb0; }
+[data-color="blue"]   { background-color: #b3d1f0; }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DIBELS Composite Score Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="content">
+
+  <h1>DIBELS Calculator</h1>
+
+  <div id="grade-selection-inputs">
+    <h2>Grade Selection</h2>
+    <div id="grade-level-selection">
+      <fieldset>
+        <legend>Grade Level</legend>
+        <label><input type="radio" name="grade-level" value="K" checked> Kindergarten</label>
+        <label><input type="radio" name="grade-level" value="1"> 1st Grade</label>
+        <label><input type="radio" name="grade-level" value="2"> 2nd Grade</label>
+        <label><input type="radio" name="grade-level" value="3"> 3rd Grade</label>
+      </fieldset>
+    </div>
+
+    <div id="grade-phase-selection">
+      <fieldset>
+        <legend>Grade Phase</legend>
+        <label><input type="radio" name="grade-phase" value="BOY" checked> Beginning of Year</label>
+        <label><input type="radio" name="grade-phase" value="MOY"> Middle of Year</label>
+        <label><input type="radio" name="grade-phase" value="EOY"> End of Year</label>
+      </fieldset>
+    </div>
+  </div>
+
+  <div id="raw-scores-input">
+    <h2>Test Scores</h2>
+    <div id="raw-score-fields">
+      <!-- Last row of the score grid, so the composite lines up under the weighted scores. -->
+      <div id="composite-score-output">
+        <span id="composite-score-label">Total Weighted Score</span>
+        <span id="composite-score-value"></span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="data.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>
